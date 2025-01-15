@@ -97,7 +97,7 @@ export async function addContact(contact) {
       };
     //   console.dir(newContact);
       contacts.push(newContact);
-      const parsedContact = JSON.stringify(contacts);
+      const parsedContact = JSON.stringify(contacts, null, 2);
       await writeFile(contactsPath, parsedContact);
 
 
